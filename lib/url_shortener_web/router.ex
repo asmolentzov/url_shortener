@@ -5,7 +5,8 @@ defmodule UrlShortenerWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", UrlShortenerWeb do
+  scope "/api/v1", UrlShortenerWeb do
     pipe_through :api
+    resources "/links", LinksController
   end
 end
