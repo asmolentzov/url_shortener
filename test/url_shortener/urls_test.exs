@@ -31,7 +31,7 @@ defmodule UrlShortener.UrlsTest do
 
     test "get_link!/1 returns the link with given short_link" do
       link = link_fixture()
-      assert Urls.get_by_short_link!(link.short_link) == link
+      assert link = Urls.get_by_short_link!(link.short_url)
     end
 
     test "create_link/1 with valid data creates a link" do
